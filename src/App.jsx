@@ -5,6 +5,7 @@ import QuizContainer from './components/QuizContainer';
 import EffectsLayer from './components/EffectsLayer';
 import PikminWalker from './components/PikminWalker';
 import shoesukeIcon from '../images/shoesuke.webp';
+import onePieceRealAudio from '../audio/onepiecereal.mp3';
 
 const FEEDBACK_DELAY = 1250;
 const correctEffectImages = Object.values(
@@ -127,6 +128,11 @@ export default function App() {
       image.src = src;
     });
   }, []);
+
+  useEffect(() => {
+    if (!isComplete) return;
+    playAudio(onePieceRealAudio);
+  }, [isComplete]);
 
   const pushBurst = useCallback((type, count) => {
     const id = `${type}-${Date.now()}-${Math.random().toString(16).slice(2)}`;

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import onePieceLogo from '../../images/onepiecelogo.png';
 
 export default function CompletionState({ onRestart, score, total }) {
   return (
@@ -11,9 +12,7 @@ export default function CompletionState({ onRestart, score, total }) {
       <motion.div
         className="completion__crest"
       >
-        <span role="img" aria-label="Heart">
-          💗
-        </span>
+        <img src={onePieceLogo} alt="One Piece" />
       </motion.div>
       <p className="question-kicker">Puntaje final {score} / {total}</p>
       <h1>¡Felicidades, te has ganado la ubicación del ONE PIECE!</h1>

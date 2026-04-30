@@ -347,10 +347,11 @@ h1 {
   transform-style: flat;
 }
 
-.completion__crest span {
+.completion__crest img {
   display: block;
-  font-size: 1.8rem;
-  line-height: 1;
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
 }
 
 .restart-button {
